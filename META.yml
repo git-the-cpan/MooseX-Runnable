@@ -1,0 +1,28 @@
+---
+abstract: 'tag a class as a runnable application'
+author: ~
+build_requires:
+  Test::More: 0
+  Test::TableDriven: 0
+  ok: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.50
+distribution_type: module
+generated_by: 'Module::Install version 0.81'
+license: unknown
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: MooseX-Runnable
+no_index:
+  directory:
+    - inc
+    - t
+requires:
+  List::MoreUtils: 0
+  Moose: 0
+  MooseX::Getopt: 0
+  MooseX::Types: 0.10
+  MooseX::Types::Path::Class: 0
+  namespace::autoclean: 0
+version: 0.00_01
