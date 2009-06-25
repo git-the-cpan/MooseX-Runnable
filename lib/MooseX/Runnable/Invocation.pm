@@ -45,13 +45,27 @@ sub BUILD {
 
         Class::MOP::load_class( $plugin );
 
-        my $args = eval {
-            $plugin->_build_initargs_from_cmdline(
-                @{$self->plugins->{$orig}},
-            );
-        };
-        if($@ && $plugin->can('_build_initargs_from_cmdline')){
-            confess "Error building initargs for $plugin: $@";
+        my $does_cmdline = $plugin->meta->
+          does_role('MooseX::Runnable::Invocation::Plugin::Role::CmdlineArgs');
+
+        my $args;
+        if($does_cmdline){
+            $args = eval {
+                $plugin->_build_initargs_from_cmdline(
+                    @{$self->plugins->{$orig}},
+                );
+            };
+
+            if($@) {
+                confess "Error building initargs for $plugin: $@";
+            }
+        }
+        elsif(!$does_cmdline && scalar @{$self->plugins->{$orig}} > 0){
+            confess "You supplied arguments to the $orig plugin, but it".
+              " does not know how to accept them.  Perhaps the plugin".
+              " should consume the".
+              " 'MooseX::Runnable::Invocation::Plugin::Role::CmdlineArgs'".
+              " role?";
         }
 
         $plugin->meta->apply(

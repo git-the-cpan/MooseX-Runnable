@@ -1,6 +1,8 @@
 package MooseX::Runnable::Invocation::Plugin::Debug;
 use Moose::Role;
 
+with 'MooseX::Runnable::Invocation::Plugin::Role::CmdlineArgs';
+
 # this is an example to cargo-cult, rather than a useful feature :)
 has 'debug_prefix' => (
     is       => 'ro',
@@ -22,6 +24,11 @@ sub _build_initargs_from_cmdline {
     return;
 }
 
+sub _debug_message {
+    my ($self, @msg) = @_;
+    print {*STDERR} $self->debug_prefix, "[$$] ", @msg, "\n";
+}
+
 for my $method (qw{
     load_class apply_scheme validate_class
     create_instance start_application
@@ -31,12 +38,12 @@ for my $method (qw{
     before $method => sub {
         my ($self, @args) = @_;
         my $args = join ', ', @args;
-        print $self->debug_prefix, "Calling $method($args)\n";
+        $self->_debug_message("Calling $method($args)");
     };
 
     after $method => sub {
         my $self = shift;
-        print $self->debug_prefix, "Returning from $method\n";
+        $self->_debug_message("Returning from $method");
     };
 }
 

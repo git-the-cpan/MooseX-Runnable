@@ -1,6 +1,7 @@
 .gitignore
 bin/mx-run
 Changes
+example/LongRunning.pm
 example/MyApp.pm
 inc/Module/Install.pm
 inc/Module/Install/Base.pm
@@ -8,13 +9,19 @@ inc/Module/Install/Can.pm
 inc/Module/Install/Fetch.pm
 inc/Module/Install/Makefile.pm
 inc/Module/Install/Metadata.pm
-inc/Module/Install/Scripts.pm
 inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
 lib/MooseX/Runnable.pm
 lib/MooseX/Runnable/Invocation.pm
+lib/MooseX/Runnable/Invocation/MxRun.pm
 lib/MooseX/Runnable/Invocation/Plugin/Debug.pm
 lib/MooseX/Runnable/Invocation/Plugin/PAR.pm
+lib/MooseX/Runnable/Invocation/Plugin/Profile.pm
+lib/MooseX/Runnable/Invocation/Plugin/Restart.pm
+lib/MooseX/Runnable/Invocation/Plugin/Restart/Auto.pm
+lib/MooseX/Runnable/Invocation/Plugin/Restart/Base.pm
+lib/MooseX/Runnable/Invocation/Plugin/Role/CmdlineArgs.pm
+lib/MooseX/Runnable/Invocation/Role/WithParsedArgs.pm
 lib/MooseX/Runnable/Invocation/Scheme/MooseX/Getopt.pm
 lib/MooseX/Runnable/Run.pm
 lib/MooseX/Runnable/Util/ArgParser.pm
@@ -27,5 +34,7 @@ t/00-load.t
 t/arg-parser.t
 t/basic-mx-getopt.t
 t/basic.t
+t/invocation-plugin-initargs.t
+t/reverse-args.t
 xt/pod-coverage.t
 xt/pod.t

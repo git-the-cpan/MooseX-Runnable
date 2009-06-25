@@ -1,7 +1,7 @@
 package MooseX::Runnable;
 use Moose::Role;
 
-our $VERSION = '0.00_01';
+our $VERSION = '0.00_02';
 
 requires 'run';
 
@@ -18,12 +18,13 @@ MooseX::Runnable - tag a class as a runnable application
 Create a class, tag it runnable, and provide a C<run> method:
 
     package App::HelloWorld;
+    use feature 'say';
     use Moose;
 
     with 'MooseX::Runnable';
 
     sub run {
-       my $name = shift;
+       my ($self,$name) = @_;
        say "Hello, $name.";
        return 0; # success
     }
@@ -62,15 +63,18 @@ run it, using C<MooseX::Runnable::Run>.
 
 The syntax is:
 
+  mx-run Class::Name
+
   mx-run <args for mx-run> -- Class::Name <args for Class::Name>
 
 for example:
 
-  mx-run -Ilib -- App::HelloWorld --args --go --here
+  mx-run -Ilib App::HelloWorld --args --go --here
 
 or:
 
-  mx-run -Ilib +Persistent --port 8080 -Persistent -- App::HelloWorld --args --go --here
+  mx-run -Ilib +Persistent --port 8080 -- App::HelloWorld --args --go --here
+
 =head2 C<MooseX::Runnable::Run>
 
 If you don't want to invoke your app with C<mx-run>, you can write a
