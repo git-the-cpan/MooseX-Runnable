@@ -1,21 +1,27 @@
 ---
 abstract: 'tag a class as a runnable application'
-author: ~
+author:
+  - 'Jonathan Rockway C<< <jrockway@cpan.org> >>'
 build_requires:
+  ExtUtils::MakeMaker: 6.42
   Test::More: 0
   Test::TableDriven: 0
   ok: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
 distribution_type: module
-generated_by: 'Module::Install version 0.77'
-license: unknown
+generated_by: 'Module::Install version 0.91'
+license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: MooseX-Runnable
 no_index:
   directory:
+    - example
     - inc
     - t
+    - xt
 requires:
   List::MoreUtils: 0
   Moose: 0
@@ -23,4 +29,6 @@ requires:
   MooseX::Types: 0.10
   MooseX::Types::Path::Class: 0
   namespace::autoclean: 0
-version: 0.00_02
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.01
