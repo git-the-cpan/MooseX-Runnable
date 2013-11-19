@@ -1,4 +1,10 @@
 package MooseX::Runnable::Invocation::Plugin::PAR;
+{
+  $MooseX::Runnable::Invocation::Plugin::PAR::VERSION = '0.04';
+}
+BEGIN {
+  $MooseX::Runnable::Invocation::Plugin::PAR::AUTHORITY = 'cpan:JROCKWAY';
+}
 use Moose::Role;
 
 use Module::ScanDeps ();

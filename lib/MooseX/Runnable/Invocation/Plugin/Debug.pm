@@ -1,4 +1,12 @@
 package MooseX::Runnable::Invocation::Plugin::Debug;
+{
+  $MooseX::Runnable::Invocation::Plugin::Debug::VERSION = '0.04';
+}
+BEGIN {
+  $MooseX::Runnable::Invocation::Plugin::Debug::AUTHORITY = 'cpan:JROCKWAY';
+}
+# ABSTRACT: print debugging information
+
 use Moose::Role;
 
 with 'MooseX::Runnable::Invocation::Plugin::Role::CmdlineArgs';
@@ -51,9 +59,19 @@ for my $method (qw{
 
 __END__
 
+=pod
+
+=encoding UTF-8
+
+=for :stopwords Jonathan Rockway
+
 =head1 NAME
 
 MooseX::Runnable::Invocation::Plugin::Debug - print debugging information
+
+=head1 VERSION
+
+version 0.04
 
 =head1 DESCRIPTION
 
@@ -65,3 +83,16 @@ messages.
 =head1 SEE ALSO
 
 L<MooseX::Runnable>
+
+=head1 AUTHOR
+
+Jonathan Rockway <jrockway@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2009 by Jonathan Rockway.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut

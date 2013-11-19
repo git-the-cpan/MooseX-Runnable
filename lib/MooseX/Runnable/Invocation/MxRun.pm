@@ -1,4 +1,10 @@
 package MooseX::Runnable::Invocation::MxRun;
+{
+  $MooseX::Runnable::Invocation::MxRun::VERSION = '0.04';
+}
+BEGIN {
+  $MooseX::Runnable::Invocation::MxRun::AUTHORITY = 'cpan:JROCKWAY';
+}
 use Moose;
 
 extends 'MooseX::Runnable::Invocation';

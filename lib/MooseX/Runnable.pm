@@ -1,7 +1,14 @@
 package MooseX::Runnable;
-use Moose::Role;
+{
+  $MooseX::Runnable::VERSION = '0.04';
+}
+# git description: v0.03-12-g7eaaa30
 
-our $VERSION = '0.03';
+BEGIN {
+  $MooseX::Runnable::AUTHORITY = 'cpan:JROCKWAY';
+}
+# ABSTRACT: Tag a class as a runnable application
+use Moose::Role;
 
 requires 'run';
 
@@ -9,9 +16,19 @@ requires 'run';
 
 __END__
 
+=pod
+
+=encoding UTF-8
+
+=for :stopwords Jonathan Rockway Duke Leto Karen Etheridge
+
 =head1 NAME
 
-MooseX::Runnable - tag a class as a runnable application
+MooseX::Runnable - Tag a class as a runnable application
+
+=head1 VERSION
+
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -56,7 +73,7 @@ let's the computer abstract away some of the tedium this entails.
 
 =head2 run
 
-Your class must implement C<run>.  It accepts the commandline args
+Your class must implement C<run>.  It accepts the command-line args
 (that were not consumed by another parser, if applicable) and returns
 an integer representing the UNIX exit value.  C<return 0> means
 success.
@@ -104,17 +121,37 @@ Many of the plugins shipped are unstable; they may go away, change,
 break, etc.  If there is no documentation for a plugin, it is probably
 just a prototype.
 
-=head1 REPOSITORY
-
-L<http://github.com/jrockway/moosex-runnable>
-
 =head1 AUTHOR
 
-Jonathan Rockway C<< <jrockway@cpan.org> >>
+Jonathan Rockway <jrockway@cpan.org>
 
-=head1 COPYRIGHT
+=head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2009 Jonathan Rockway
+This software is copyright (c) 2009 by Jonathan Rockway.
 
-This module is Free Software, you can redistribute it under the same
-terms as Perl itself.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=head1 CONTRIBUTORS
+
+=over 4
+
+=item *
+
+Duke Leto <jonathan@leto.net>
+
+=item *
+
+Jonathan Rockway <jon@jrock.us>
+
+=item *
+
+Karen Etheridge <ether@cpan.org>
+
+=item *
+
+Karen Etheridge <karen@etheridge.ca>
+
+=back
+
+=cut

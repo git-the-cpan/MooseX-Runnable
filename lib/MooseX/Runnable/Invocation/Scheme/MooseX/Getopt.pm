@@ -1,4 +1,10 @@
 package MooseX::Runnable::Invocation::Scheme::MooseX::Getopt;
+{
+  $MooseX::Runnable::Invocation::Scheme::MooseX::Getopt::VERSION = '0.04';
+}
+BEGIN {
+  $MooseX::Runnable::Invocation::Scheme::MooseX::Getopt::AUTHORITY = 'cpan:JROCKWAY';
+}
 use Moose::Role;
 
 around validate_class => sub {

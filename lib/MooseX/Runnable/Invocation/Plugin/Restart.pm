@@ -1,4 +1,10 @@
 package MooseX::Runnable::Invocation::Plugin::Restart;
+{
+  $MooseX::Runnable::Invocation::Plugin::Restart::VERSION = '0.04';
+}
+BEGIN {
+  $MooseX::Runnable::Invocation::Plugin::Restart::AUTHORITY = 'cpan:JROCKWAY';
+}
 use Moose::Role;
 use MooseX::Types::Moose qw(Str);
 use AnyEvent;

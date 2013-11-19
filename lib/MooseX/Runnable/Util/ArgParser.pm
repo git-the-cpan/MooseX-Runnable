@@ -1,7 +1,16 @@
 package MooseX::Runnable::Util::ArgParser;
+{
+  $MooseX::Runnable::Util::ArgParser::VERSION = '0.04';
+}
+BEGIN {
+  $MooseX::Runnable::Util::ArgParser::AUTHORITY = 'cpan:JROCKWAY';
+}
+# ABSTRACT: parse @ARGV for mx-run
+
 use Moose;
 use MooseX::Types::Moose qw(HashRef ArrayRef Str Bool);
-use MooseX::Types::Path::Class qw(Dir);
+use MooseX::Types::Path::Tiny qw(Path);
+use Path::Tiny; # exports path()
 use List::MoreUtils qw(first_index);
 
 use FindBin;
@@ -30,7 +39,7 @@ has 'modules' => (
 
 has 'include_paths' => (
     is         => 'ro',
-    isa        => ArrayRef[Dir],
+    isa        => ArrayRef[Path],
     lazy_build => 1,
     auto_deref => 1,
 );
@@ -119,7 +128,7 @@ sub _build_modules {
 sub _build_include_paths {
     my $self = shift;
     my @args = $self->argv;
-    return [ map { Path::Class::dir($_) } _look_for_dash_something 'I', @args ];
+    return [ map { path($_) } _look_for_dash_something 'I', @args ];
 }
 
 sub _build_is_help {
@@ -259,9 +268,19 @@ sub guess_cmdline {
 
 __END__
 
+=pod
+
+=encoding UTF-8
+
+=for :stopwords Jonathan Rockway Duke Leto Karen Etheridge mx
+
 =head1 NAME
 
 MooseX::Runnable::Util::ArgParser - parse @ARGV for mx-run
+
+=head1 VERSION
+
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -276,3 +295,15 @@ MooseX::Runnable::Util::ArgParser - parse @ARGV for mx-run
     $parser->is_help;
     $parser->app_args;
 
+=head1 AUTHOR
+
+Jonathan Rockway <jrockway@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2009 by Jonathan Rockway.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut

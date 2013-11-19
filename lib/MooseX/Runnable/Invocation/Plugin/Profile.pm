@@ -1,4 +1,10 @@
 package MooseX::Runnable::Invocation::Plugin::Profile;
+{
+  $MooseX::Runnable::Invocation::Plugin::Profile::VERSION = '0.04';
+}
+BEGIN {
+  $MooseX::Runnable::Invocation::Plugin::Profile::AUTHORITY = 'cpan:JROCKWAY';
+}
 use Moose::Role;
 
 before 'load_class' => sub {

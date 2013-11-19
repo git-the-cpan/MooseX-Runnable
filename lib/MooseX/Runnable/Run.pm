@@ -1,4 +1,11 @@
 package MooseX::Runnable::Run;
+{
+  $MooseX::Runnable::Run::VERSION = '0.04';
+}
+BEGIN {
+  $MooseX::Runnable::Run::AUTHORITY = 'cpan:JROCKWAY';
+}
+# ABSTRACT: Run a MooseX::Runnable class as an application
 use strict;
 use warnings;
 
@@ -38,9 +45,19 @@ sub import {
 
 __END__
 
+=pod
+
+=encoding UTF-8
+
+=for :stopwords Jonathan Rockway Duke Leto Karen Etheridge
+
 =head1 NAME
 
-MooseX::Runnable::Run - run a MooseX::Runnable class as an application
+MooseX::Runnable::Run - Run a MooseX::Runnable class as an application
+
+=head1 VERSION
+
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -80,3 +97,16 @@ L<mx-run>, a script that will run MooseX::Runnable apps, saving you
 valuable seconds!
 
 L<MooseX::Runnable>
+
+=head1 AUTHOR
+
+Jonathan Rockway <jrockway@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2009 by Jonathan Rockway.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
