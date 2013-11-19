@@ -1,6 +1,6 @@
 package MooseX::Runnable::Invocation::Role::WithParsedArgs;
 {
-  $MooseX::Runnable::Invocation::Role::WithParsedArgs::VERSION = '0.04';
+  $MooseX::Runnable::Invocation::Role::WithParsedArgs::VERSION = '0.05';
 }
 BEGIN {
   $MooseX::Runnable::Invocation::Role::WithParsedArgs::AUTHORITY = 'cpan:JROCKWAY';

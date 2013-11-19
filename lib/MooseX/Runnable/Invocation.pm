@@ -1,6 +1,6 @@
 package MooseX::Runnable::Invocation;
 {
-  $MooseX::Runnable::Invocation::VERSION = '0.04';
+  $MooseX::Runnable::Invocation::VERSION = '0.05';
 }
 BEGIN {
   $MooseX::Runnable::Invocation::AUTHORITY = 'cpan:JROCKWAY';

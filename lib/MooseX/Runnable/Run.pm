@@ -1,6 +1,6 @@
 package MooseX::Runnable::Run;
 {
-  $MooseX::Runnable::Run::VERSION = '0.04';
+  $MooseX::Runnable::Run::VERSION = '0.05';
 }
 BEGIN {
   $MooseX::Runnable::Run::AUTHORITY = 'cpan:JROCKWAY';
@@ -49,7 +49,7 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords Jonathan Rockway Duke Leto Karen Etheridge
+=for :stopwords Jonathan Rockway
 
 =head1 NAME
 
@@ -57,7 +57,7 @@ MooseX::Runnable::Run - Run a MooseX::Runnable class as an application
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 

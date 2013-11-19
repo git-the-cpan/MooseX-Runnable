@@ -1,6 +1,6 @@
 package MooseX::Runnable::Invocation::Plugin::PAR;
 {
-  $MooseX::Runnable::Invocation::Plugin::PAR::VERSION = '0.04';
+  $MooseX::Runnable::Invocation::Plugin::PAR::VERSION = '0.05';
 }
 BEGIN {
   $MooseX::Runnable::Invocation::Plugin::PAR::AUTHORITY = 'cpan:JROCKWAY';

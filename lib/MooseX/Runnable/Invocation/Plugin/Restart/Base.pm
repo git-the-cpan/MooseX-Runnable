@@ -1,6 +1,6 @@
 package MooseX::Runnable::Invocation::Plugin::Restart::Base;
 {
-  $MooseX::Runnable::Invocation::Plugin::Restart::Base::VERSION = '0.04';
+  $MooseX::Runnable::Invocation::Plugin::Restart::Base::VERSION = '0.05';
 }
 BEGIN {
   $MooseX::Runnable::Invocation::Plugin::Restart::Base::AUTHORITY = 'cpan:JROCKWAY';

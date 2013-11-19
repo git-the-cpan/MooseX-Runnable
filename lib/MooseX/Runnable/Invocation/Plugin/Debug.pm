@@ -1,6 +1,6 @@
 package MooseX::Runnable::Invocation::Plugin::Debug;
 {
-  $MooseX::Runnable::Invocation::Plugin::Debug::VERSION = '0.04';
+  $MooseX::Runnable::Invocation::Plugin::Debug::VERSION = '0.05';
 }
 BEGIN {
   $MooseX::Runnable::Invocation::Plugin::Debug::AUTHORITY = 'cpan:JROCKWAY';
@@ -63,7 +63,7 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords Jonathan Rockway
+=for :stopwords Jonathan Rockway Duke Leto Karen Etheridge
 
 =head1 NAME
 
@@ -71,7 +71,7 @@ MooseX::Runnable::Invocation::Plugin::Debug - print debugging information
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 DESCRIPTION
 

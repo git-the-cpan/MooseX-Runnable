@@ -29,46 +29,46 @@ no_index:
 provides:
   MooseX::Runnable:
     file: lib/MooseX/Runnable.pm
-    version: 0.04
+    version: 0.05
   MooseX::Runnable::Invocation:
     file: lib/MooseX/Runnable/Invocation.pm
-    version: 0.04
+    version: 0.05
   MooseX::Runnable::Invocation::MxRun:
     file: lib/MooseX/Runnable/Invocation/MxRun.pm
-    version: 0.04
+    version: 0.05
   MooseX::Runnable::Invocation::Plugin::Debug:
     file: lib/MooseX/Runnable/Invocation/Plugin/Debug.pm
-    version: 0.04
+    version: 0.05
   MooseX::Runnable::Invocation::Plugin::PAR:
     file: lib/MooseX/Runnable/Invocation/Plugin/PAR.pm
-    version: 0.04
+    version: 0.05
   MooseX::Runnable::Invocation::Plugin::Profile:
     file: lib/MooseX/Runnable/Invocation/Plugin/Profile.pm
-    version: 0.04
+    version: 0.05
   MooseX::Runnable::Invocation::Plugin::Restart:
     file: lib/MooseX/Runnable/Invocation/Plugin/Restart.pm
-    version: 0.04
+    version: 0.05
   MooseX::Runnable::Invocation::Plugin::Restart::Auto:
     file: lib/MooseX/Runnable/Invocation/Plugin/Restart/Auto.pm
-    version: 0.04
+    version: 0.05
   MooseX::Runnable::Invocation::Plugin::Restart::Base:
     file: lib/MooseX/Runnable/Invocation/Plugin/Restart/Base.pm
-    version: 0.04
+    version: 0.05
   MooseX::Runnable::Invocation::Plugin::Role::CmdlineArgs:
     file: lib/MooseX/Runnable/Invocation/Plugin/Role/CmdlineArgs.pm
-    version: 0.04
+    version: 0.05
   MooseX::Runnable::Invocation::Role::WithParsedArgs:
     file: lib/MooseX/Runnable/Invocation/Role/WithParsedArgs.pm
-    version: 0.04
+    version: 0.05
   MooseX::Runnable::Invocation::Scheme::MooseX::Getopt:
     file: lib/MooseX/Runnable/Invocation/Scheme/MooseX/Getopt.pm
-    version: 0.04
+    version: 0.05
   MooseX::Runnable::Run:
     file: lib/MooseX/Runnable/Run.pm
-    version: 0.04
+    version: 0.05
   MooseX::Runnable::Util::ArgParser:
     file: lib/MooseX/Runnable/Util/ArgParser.pm
-    version: 0.04
+    version: 0.05
 recommends:
   MooseX::Getopt: 0
 requires:
@@ -90,8 +90,9 @@ resources:
   IRC: irc://irc.perl.org/#moose
   MailingList: http://lists.perl.org/list/moose.html
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=MooseX-Runnable
-  repository: git://git.moose.perl.org/MooseX-Runnable.git
-version: 0.04
+  homepage: https://github.com/moose/MooseX-Runnable
+  repository: https://github.com/moose/MooseX-Runnable.git
+version: 0.05
 x_Dist_Zilla:
   perl:
     version: 5.019005
@@ -348,6 +349,10 @@ x_Dist_Zilla:
       name: '@Author::ETHER/ReadmeAnyFromPod'
       version: 0.133060
     -
+      class: Dist::Zilla::Plugin::GithubMeta
+      name: '@Author::ETHER/GithubMeta'
+      version: 0.42
+    -
       class: Dist::Zilla::Plugin::AutoMetaResources
       name: '@Author::ETHER/AutoMetaResources'
       version: 1.20
@@ -470,6 +475,10 @@ x_Dist_Zilla:
       name: '@Author::ETHER/Git::Tag'
       version: 2.017
     -
+      class: Dist::Zilla::Plugin::GitHub::Update
+      name: '@Author::ETHER/GitHub::Update'
+      version: 0.35
+    -
       class: Dist::Zilla::Plugin::Git::Push
       name: '@Author::ETHER/Git::Push'
       version: 2.017
@@ -480,6 +489,14 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::ConfirmRelease
       name: '@Author::ETHER/ConfirmRelease'
+      version: 5.006
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: develop
+          type: requires
+      name: '@Author::ETHER/via_options'
       version: 5.006
     -
       class: Dist::Zilla::Plugin::MetaResources

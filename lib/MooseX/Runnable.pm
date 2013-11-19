@@ -1,8 +1,8 @@
 package MooseX::Runnable;
 {
-  $MooseX::Runnable::VERSION = '0.04';
+  $MooseX::Runnable::VERSION = '0.05';
 }
-# git description: v0.03-12-g7eaaa30
+# git description: v0.04-1-g76678c3
 
 BEGIN {
   $MooseX::Runnable::AUTHORITY = 'cpan:JROCKWAY';
@@ -28,7 +28,7 @@ MooseX::Runnable - Tag a class as a runnable application
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 

@@ -1,6 +1,6 @@
 package MooseX::Runnable::Util::ArgParser;
 {
-  $MooseX::Runnable::Util::ArgParser::VERSION = '0.04';
+  $MooseX::Runnable::Util::ArgParser::VERSION = '0.05';
 }
 BEGIN {
   $MooseX::Runnable::Util::ArgParser::AUTHORITY = 'cpan:JROCKWAY';
@@ -280,7 +280,7 @@ MooseX::Runnable::Util::ArgParser - parse @ARGV for mx-run
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
