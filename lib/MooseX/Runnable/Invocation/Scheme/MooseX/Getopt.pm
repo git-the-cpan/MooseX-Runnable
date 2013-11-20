@@ -1,6 +1,6 @@
 package MooseX::Runnable::Invocation::Scheme::MooseX::Getopt;
 {
-  $MooseX::Runnable::Invocation::Scheme::MooseX::Getopt::VERSION = '0.05';
+  $MooseX::Runnable::Invocation::Scheme::MooseX::Getopt::VERSION = '0.06';
 }
 BEGIN {
   $MooseX::Runnable::Invocation::Scheme::MooseX::Getopt::AUTHORITY = 'cpan:JROCKWAY';

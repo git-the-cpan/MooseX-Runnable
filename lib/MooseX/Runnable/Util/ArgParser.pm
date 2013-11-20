@@ -1,6 +1,6 @@
 package MooseX::Runnable::Util::ArgParser;
 {
-  $MooseX::Runnable::Util::ArgParser::VERSION = '0.05';
+  $MooseX::Runnable::Util::ArgParser::VERSION = '0.06';
 }
 BEGIN {
   $MooseX::Runnable::Util::ArgParser::AUTHORITY = 'cpan:JROCKWAY';
@@ -272,7 +272,7 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords Jonathan Rockway Duke Leto Karen Etheridge mx
+=for :stopwords Jonathan Rockway mx
 
 =head1 NAME
 
@@ -280,7 +280,7 @@ MooseX::Runnable::Util::ArgParser - parse @ARGV for mx-run
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 

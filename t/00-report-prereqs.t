@@ -12,22 +12,28 @@ use File::Spec::Functions;
 use List::Util qw/max/;
 
 my @modules = qw(
+  AnyEvent
   CPAN::Meta
   CPAN::Meta::Requirements
+  Class::Load
+  Data::Dump::Streamer
   ExtUtils::MakeMaker
+  File::ChangeNotify
   File::Spec::Functions
   FindBin
   List::MoreUtils
   List::Util
   Module::Build::Tiny
-  Module::Runtime
+  Module::ScanDeps
   Moose
   Moose::Role
   MooseX::Getopt
   MooseX::Types
   MooseX::Types::Moose
   MooseX::Types::Path::Tiny
+  PAR::Packer
   Params::Util
+  Params::Validate
   Path::Tiny
   Test::Fatal
   Test::More

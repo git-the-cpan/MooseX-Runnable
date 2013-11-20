@@ -7,8 +7,8 @@ use warnings;
 
 BEGIN {
 my %configure_requires = (
-    'ExtUtils::MakeMaker' => '6.30',
     'Module::Build::Tiny' => '0.030',
+    'ExtUtils::MakeMaker' => '6.30',
 );
 
 my @missing = grep {
@@ -72,9 +72,9 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "MooseX::Runnable",
   "PREREQ_PM" => {
+    "Class::Load" => 0,
     "FindBin" => 0,
     "List::MoreUtils" => 0,
-    "Module::Runtime" => 0,
     "Moose" => 0,
     "Moose::Role" => 0,
     "MooseX::Types" => 0,
@@ -96,7 +96,7 @@ my %WriteMakefileArgs = (
     "Test::TableDriven" => 0,
     "ok" => 0
   },
-  "VERSION" => "0.05",
+  "VERSION" => "0.06",
   "test" => {
     "TESTS" => "t/*.t"
   }

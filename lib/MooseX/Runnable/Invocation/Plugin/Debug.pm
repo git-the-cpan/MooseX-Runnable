@@ -1,6 +1,6 @@
 package MooseX::Runnable::Invocation::Plugin::Debug;
 {
-  $MooseX::Runnable::Invocation::Plugin::Debug::VERSION = '0.05';
+  $MooseX::Runnable::Invocation::Plugin::Debug::VERSION = '0.06';
 }
 BEGIN {
   $MooseX::Runnable::Invocation::Plugin::Debug::AUTHORITY = 'cpan:JROCKWAY';
@@ -71,7 +71,7 @@ MooseX::Runnable::Invocation::Plugin::Debug - print debugging information
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 DESCRIPTION
 

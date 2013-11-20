@@ -66,9 +66,9 @@
             "MooseX::Getopt" : "0"
          },
          "requires" : {
+            "Class::Load" : "0",
             "FindBin" : "0",
             "List::MoreUtils" : "0",
-            "Module::Runtime" : "0",
             "Moose" : "0",
             "Moose::Role" : "0",
             "MooseX::Types" : "0",
@@ -80,6 +80,14 @@
             "perl" : "5.006",
             "strict" : "0",
             "warnings" : "0"
+         },
+         "suggests" : {
+            "AnyEvent" : "0",
+            "Data::Dump::Streamer" : "0",
+            "File::ChangeNotify" : "0",
+            "Module::ScanDeps" : "0",
+            "PAR::Packer" : "0",
+            "Params::Validate" : "0"
          }
       },
       "test" : {
@@ -102,59 +110,59 @@
    "provides" : {
       "MooseX::Runnable" : {
          "file" : "lib/MooseX/Runnable.pm",
-         "version" : "0.05"
+         "version" : "0.06"
       },
       "MooseX::Runnable::Invocation" : {
          "file" : "lib/MooseX/Runnable/Invocation.pm",
-         "version" : "0.05"
+         "version" : "0.06"
       },
       "MooseX::Runnable::Invocation::MxRun" : {
          "file" : "lib/MooseX/Runnable/Invocation/MxRun.pm",
-         "version" : "0.05"
+         "version" : "0.06"
       },
       "MooseX::Runnable::Invocation::Plugin::Debug" : {
          "file" : "lib/MooseX/Runnable/Invocation/Plugin/Debug.pm",
-         "version" : "0.05"
+         "version" : "0.06"
       },
       "MooseX::Runnable::Invocation::Plugin::PAR" : {
          "file" : "lib/MooseX/Runnable/Invocation/Plugin/PAR.pm",
-         "version" : "0.05"
+         "version" : "0.06"
       },
       "MooseX::Runnable::Invocation::Plugin::Profile" : {
          "file" : "lib/MooseX/Runnable/Invocation/Plugin/Profile.pm",
-         "version" : "0.05"
+         "version" : "0.06"
       },
       "MooseX::Runnable::Invocation::Plugin::Restart" : {
          "file" : "lib/MooseX/Runnable/Invocation/Plugin/Restart.pm",
-         "version" : "0.05"
+         "version" : "0.06"
       },
       "MooseX::Runnable::Invocation::Plugin::Restart::Auto" : {
          "file" : "lib/MooseX/Runnable/Invocation/Plugin/Restart/Auto.pm",
-         "version" : "0.05"
+         "version" : "0.06"
       },
       "MooseX::Runnable::Invocation::Plugin::Restart::Base" : {
          "file" : "lib/MooseX/Runnable/Invocation/Plugin/Restart/Base.pm",
-         "version" : "0.05"
+         "version" : "0.06"
       },
       "MooseX::Runnable::Invocation::Plugin::Role::CmdlineArgs" : {
          "file" : "lib/MooseX/Runnable/Invocation/Plugin/Role/CmdlineArgs.pm",
-         "version" : "0.05"
+         "version" : "0.06"
       },
       "MooseX::Runnable::Invocation::Role::WithParsedArgs" : {
          "file" : "lib/MooseX/Runnable/Invocation/Role/WithParsedArgs.pm",
-         "version" : "0.05"
+         "version" : "0.06"
       },
       "MooseX::Runnable::Invocation::Scheme::MooseX::Getopt" : {
          "file" : "lib/MooseX/Runnable/Invocation/Scheme/MooseX/Getopt.pm",
-         "version" : "0.05"
+         "version" : "0.06"
       },
       "MooseX::Runnable::Run" : {
          "file" : "lib/MooseX/Runnable/Run.pm",
-         "version" : "0.05"
+         "version" : "0.06"
       },
       "MooseX::Runnable::Util::ArgParser" : {
          "file" : "lib/MooseX/Runnable/Util/ArgParser.pm",
-         "version" : "0.05"
+         "version" : "0.06"
       }
    },
    "release_status" : "stable",
@@ -172,7 +180,7 @@
       "x_IRC" : "irc://irc.perl.org/#moose",
       "x_MailingList" : "http://lists.perl.org/list/moose.html"
    },
-   "version" : "0.05",
+   "version" : "0.06",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.019005"
@@ -704,6 +712,17 @@
                }
             },
             "name" : "RuntimeRecommends",
+            "version" : "5.006"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Prereqs",
+            "config" : {
+               "Dist::Zilla::Plugin::Prereqs" : {
+                  "phase" : "runtime",
+                  "type" : "suggests"
+               }
+            },
+            "name" : "RuntimeSuggests",
             "version" : "5.006"
          },
          {

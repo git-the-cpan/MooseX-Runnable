@@ -29,52 +29,52 @@ no_index:
 provides:
   MooseX::Runnable:
     file: lib/MooseX/Runnable.pm
-    version: 0.05
+    version: 0.06
   MooseX::Runnable::Invocation:
     file: lib/MooseX/Runnable/Invocation.pm
-    version: 0.05
+    version: 0.06
   MooseX::Runnable::Invocation::MxRun:
     file: lib/MooseX/Runnable/Invocation/MxRun.pm
-    version: 0.05
+    version: 0.06
   MooseX::Runnable::Invocation::Plugin::Debug:
     file: lib/MooseX/Runnable/Invocation/Plugin/Debug.pm
-    version: 0.05
+    version: 0.06
   MooseX::Runnable::Invocation::Plugin::PAR:
     file: lib/MooseX/Runnable/Invocation/Plugin/PAR.pm
-    version: 0.05
+    version: 0.06
   MooseX::Runnable::Invocation::Plugin::Profile:
     file: lib/MooseX/Runnable/Invocation/Plugin/Profile.pm
-    version: 0.05
+    version: 0.06
   MooseX::Runnable::Invocation::Plugin::Restart:
     file: lib/MooseX/Runnable/Invocation/Plugin/Restart.pm
-    version: 0.05
+    version: 0.06
   MooseX::Runnable::Invocation::Plugin::Restart::Auto:
     file: lib/MooseX/Runnable/Invocation/Plugin/Restart/Auto.pm
-    version: 0.05
+    version: 0.06
   MooseX::Runnable::Invocation::Plugin::Restart::Base:
     file: lib/MooseX/Runnable/Invocation/Plugin/Restart/Base.pm
-    version: 0.05
+    version: 0.06
   MooseX::Runnable::Invocation::Plugin::Role::CmdlineArgs:
     file: lib/MooseX/Runnable/Invocation/Plugin/Role/CmdlineArgs.pm
-    version: 0.05
+    version: 0.06
   MooseX::Runnable::Invocation::Role::WithParsedArgs:
     file: lib/MooseX/Runnable/Invocation/Role/WithParsedArgs.pm
-    version: 0.05
+    version: 0.06
   MooseX::Runnable::Invocation::Scheme::MooseX::Getopt:
     file: lib/MooseX/Runnable/Invocation/Scheme/MooseX/Getopt.pm
-    version: 0.05
+    version: 0.06
   MooseX::Runnable::Run:
     file: lib/MooseX/Runnable/Run.pm
-    version: 0.05
+    version: 0.06
   MooseX::Runnable::Util::ArgParser:
     file: lib/MooseX/Runnable/Util/ArgParser.pm
-    version: 0.05
+    version: 0.06
 recommends:
   MooseX::Getopt: 0
 requires:
+  Class::Load: 0
   FindBin: 0
   List::MoreUtils: 0
-  Module::Runtime: 0
   Moose: 0
   Moose::Role: 0
   MooseX::Types: 0
@@ -92,7 +92,7 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=MooseX-Runnable
   homepage: https://github.com/moose/MooseX-Runnable
   repository: https://github.com/moose/MooseX-Runnable.git
-version: 0.05
+version: 0.06
 x_Dist_Zilla:
   perl:
     version: 5.019005
@@ -509,6 +509,14 @@ x_Dist_Zilla:
           phase: runtime
           type: recommends
       name: RuntimeRecommends
+      version: 5.006
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: runtime
+          type: suggests
+      name: RuntimeSuggests
       version: 5.006
     -
       class: Dist::Zilla::Plugin::Prereqs
