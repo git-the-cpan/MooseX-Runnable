@@ -1,12 +1,11 @@
 package MooseX::Runnable::Invocation::Role::WithParsedArgs;
-{
-  $MooseX::Runnable::Invocation::Role::WithParsedArgs::VERSION = '0.06';
-}
 BEGIN {
   $MooseX::Runnable::Invocation::Role::WithParsedArgs::AUTHORITY = 'cpan:JROCKWAY';
 }
+$MooseX::Runnable::Invocation::Role::WithParsedArgs::VERSION = '0.07';
 use Moose::Role;
 use MooseX::Runnable::Util::ArgParser;
+use namespace::autoclean;
 
 has 'parsed_args' => (
     is       => 'ro',

@@ -1,11 +1,10 @@
 package MooseX::Runnable::Invocation::Plugin::Role::CmdlineArgs;
-{
-  $MooseX::Runnable::Invocation::Plugin::Role::CmdlineArgs::VERSION = '0.06';
-}
 BEGIN {
   $MooseX::Runnable::Invocation::Plugin::Role::CmdlineArgs::AUTHORITY = 'cpan:JROCKWAY';
 }
+$MooseX::Runnable::Invocation::Plugin::Role::CmdlineArgs::VERSION = '0.07';
 use Moose::Role;
+use namespace::autoclean;
 
 requires '_build_initargs_from_cmdline';
 

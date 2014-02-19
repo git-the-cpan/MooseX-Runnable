@@ -1,10 +1,8 @@
 package MooseX::Runnable::Invocation::Plugin::Restart::Auto;
-{
-  $MooseX::Runnable::Invocation::Plugin::Restart::Auto::VERSION = '0.06';
-}
 BEGIN {
   $MooseX::Runnable::Invocation::Plugin::Restart::Auto::AUTHORITY = 'cpan:JROCKWAY';
 }
+$MooseX::Runnable::Invocation::Plugin::Restart::Auto::VERSION = '0.07';
 use Moose::Role;
 use MooseX::Types;
 use MooseX::Types::Moose qw(ArrayRef RegexpRef Any Str);
@@ -12,10 +10,6 @@ use MooseX::Types::Path::Tiny qw(Path);
 use Path::Tiny; # exports path()
 use File::ChangeNotify;
 use namespace::autoclean;
-
-# coerce ArrayRef[Dir], from ArrayRef[Any], via {[
-#     map { warn $_; Path::Class::dir($_) } @$_,
-# ]};
 
 coerce RegexpRef, from Str, via { qr/$_/i };
 

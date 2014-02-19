@@ -1,10 +1,8 @@
 package MooseX::Runnable::Invocation;
-{
-  $MooseX::Runnable::Invocation::VERSION = '0.06';
-}
 BEGIN {
   $MooseX::Runnable::Invocation::AUTHORITY = 'cpan:JROCKWAY';
 }
+$MooseX::Runnable::Invocation::VERSION = '0.07';
 use Moose;
 use MooseX::Types -declare => ['RunnableClass'];
 use MooseX::Types::Moose qw(Str HashRef ArrayRef);

@@ -1,14 +1,13 @@
 package MooseX::Runnable;
-{
-  $MooseX::Runnable::VERSION = '0.06';
-}
-# git description: v0.05-2-g0dd0034
-
 BEGIN {
   $MooseX::Runnable::AUTHORITY = 'cpan:JROCKWAY';
 }
+# git description: v0.06-10-g16c7773
+$MooseX::Runnable::VERSION = '0.07';
 # ABSTRACT: Tag a class as a runnable application
+
 use Moose::Role;
+use namespace::autoclean;
 
 requires 'run';
 
@@ -20,7 +19,7 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords Jonathan Rockway Duke Leto Karen Etheridge
+=for :stopwords Jonathan Rockway Doug Bell Duke Leto Karen Etheridge
 
 =head1 NAME
 
@@ -28,7 +27,7 @@ MooseX::Runnable - Tag a class as a runnable application
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 
@@ -138,6 +137,10 @@ the same terms as the Perl 5 programming language system itself.
 
 =item *
 
+Doug Bell <doug.bell@baml.com>
+
+=item *
+
 Duke Leto <jonathan@leto.net>
 
 =item *
@@ -147,10 +150,6 @@ Jonathan Rockway <jon@jrock.us>
 =item *
 
 Karen Etheridge <ether@cpan.org>
-
-=item *
-
-Karen Etheridge <karen@etheridge.ca>
 
 =back
 

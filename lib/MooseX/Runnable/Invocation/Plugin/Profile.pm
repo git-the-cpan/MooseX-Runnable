@@ -1,11 +1,10 @@
 package MooseX::Runnable::Invocation::Plugin::Profile;
-{
-  $MooseX::Runnable::Invocation::Plugin::Profile::VERSION = '0.06';
-}
 BEGIN {
   $MooseX::Runnable::Invocation::Plugin::Profile::AUTHORITY = 'cpan:JROCKWAY';
 }
+$MooseX::Runnable::Invocation::Plugin::Profile::VERSION = '0.07';
 use Moose::Role;
+use namespace::autoclean;
 
 before 'load_class' => sub {
     my ($self) = @_;

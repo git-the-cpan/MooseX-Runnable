@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-# this test was generated with Dist::Zilla::Plugin::Test::NoTabs 0.05
+# this test was generated with Dist::Zilla::Plugin::Test::NoTabs 0.06
 
 use Test::More 0.88;
 use Test::NoTabs;
@@ -21,7 +21,7 @@ my @files = (
     'lib/MooseX/Runnable/Invocation/Scheme/MooseX/Getopt.pm',
     'lib/MooseX/Runnable/Run.pm',
     'lib/MooseX/Runnable/Util/ArgParser.pm',
-    'script/bin/mx-run'
+    'script/mx-run'
 );
 
 notabs_ok($_) foreach @files;

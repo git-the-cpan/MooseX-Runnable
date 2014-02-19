@@ -1,18 +1,14 @@
 package MooseX::Runnable::Util::ArgParser;
-{
-  $MooseX::Runnable::Util::ArgParser::VERSION = '0.06';
-}
 BEGIN {
   $MooseX::Runnable::Util::ArgParser::AUTHORITY = 'cpan:JROCKWAY';
 }
 # ABSTRACT: parse @ARGV for mx-run
-
+$MooseX::Runnable::Util::ArgParser::VERSION = '0.07';
 use Moose;
 use MooseX::Types::Moose qw(HashRef ArrayRef Str Bool);
 use MooseX::Types::Path::Tiny qw(Path);
 use Path::Tiny; # exports path()
 use List::MoreUtils qw(first_index);
-
 use FindBin;
 
 use namespace::autoclean -also => ['_look_for_dash_something', '_delete_first'];
@@ -272,7 +268,7 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords Jonathan Rockway mx
+=for :stopwords Jonathan Rockway Doug Bell Duke Leto Karen Etheridge mx
 
 =head1 NAME
 
@@ -280,7 +276,7 @@ MooseX::Runnable::Util::ArgParser - parse @ARGV for mx-run
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 

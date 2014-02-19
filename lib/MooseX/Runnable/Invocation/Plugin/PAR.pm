@@ -1,19 +1,15 @@
 package MooseX::Runnable::Invocation::Plugin::PAR;
-{
-  $MooseX::Runnable::Invocation::Plugin::PAR::VERSION = '0.06';
-}
 BEGIN {
   $MooseX::Runnable::Invocation::Plugin::PAR::AUTHORITY = 'cpan:JROCKWAY';
 }
+$MooseX::Runnable::Invocation::Plugin::PAR::VERSION = '0.07';
 use Moose::Role;
-
 use Module::ScanDeps ();
 use App::Packer::PAR ();
 use MooseX::Runnable::Run;
-
 use Data::Dump::Streamer;
-
 use File::Temp qw(tempfile);
+use namespace::autoclean;
 
 my $mk_scanner = sub {
     my $class = Moose::Meta::Class->create_anon_class( superclasses => ['Moose::Object'] );

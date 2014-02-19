@@ -1,10 +1,8 @@
 package MooseX::Runnable::Invocation::Plugin::Restart::Base;
-{
-  $MooseX::Runnable::Invocation::Plugin::Restart::Base::VERSION = '0.06';
-}
 BEGIN {
   $MooseX::Runnable::Invocation::Plugin::Restart::Base::AUTHORITY = 'cpan:JROCKWAY';
 }
+$MooseX::Runnable::Invocation::Plugin::Restart::Base::VERSION = '0.07';
 use Moose::Role;
 use MooseX::Types::Moose qw(Int);
 use namespace::autoclean;
