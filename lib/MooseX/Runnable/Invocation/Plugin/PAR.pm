@@ -2,7 +2,7 @@ package MooseX::Runnable::Invocation::Plugin::PAR;
 BEGIN {
   $MooseX::Runnable::Invocation::Plugin::PAR::AUTHORITY = 'cpan:JROCKWAY';
 }
-$MooseX::Runnable::Invocation::Plugin::PAR::VERSION = '0.07';
+$MooseX::Runnable::Invocation::Plugin::PAR::VERSION = '0.08';
 use Moose::Role;
 use Module::ScanDeps ();
 use App::Packer::PAR ();

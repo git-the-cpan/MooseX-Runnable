@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Runnable::Invocation::Plugin::Debug::AUTHORITY = 'cpan:JROCKWAY';
 }
 # ABSTRACT: print debugging information
-$MooseX::Runnable::Invocation::Plugin::Debug::VERSION = '0.07';
+$MooseX::Runnable::Invocation::Plugin::Debug::VERSION = '0.08';
 use Moose::Role;
 use namespace::autoclean;
 
@@ -61,15 +61,13 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords Jonathan Rockway Doug Bell Duke Leto Karen Etheridge
-
 =head1 NAME
 
 MooseX::Runnable::Invocation::Plugin::Debug - print debugging information
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 DESCRIPTION
 

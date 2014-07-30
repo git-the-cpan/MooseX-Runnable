@@ -2,8 +2,8 @@ package MooseX::Runnable::Util::ArgParser;
 BEGIN {
   $MooseX::Runnable::Util::ArgParser::AUTHORITY = 'cpan:JROCKWAY';
 }
-# ABSTRACT: parse @ARGV for mx-run
-$MooseX::Runnable::Util::ArgParser::VERSION = '0.07';
+# ABSTRACT: parse @ARGV for C<mx-run>
+$MooseX::Runnable::Util::ArgParser::VERSION = '0.08';
 use Moose;
 use MooseX::Types::Moose qw(HashRef ArrayRef Str Bool);
 use MooseX::Types::Path::Tiny qw(Path);
@@ -268,15 +268,13 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords Jonathan Rockway Doug Bell Duke Leto Karen Etheridge mx
-
 =head1 NAME
 
-MooseX::Runnable::Util::ArgParser - parse @ARGV for mx-run
+MooseX::Runnable::Util::ArgParser - parse @ARGV for C<mx-run>
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 

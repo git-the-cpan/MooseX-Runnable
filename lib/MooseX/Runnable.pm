@@ -2,8 +2,8 @@ package MooseX::Runnable;
 BEGIN {
   $MooseX::Runnable::AUTHORITY = 'cpan:JROCKWAY';
 }
-# git description: v0.06-10-g16c7773
-$MooseX::Runnable::VERSION = '0.07';
+# git description: v0.07-6-g1ab65a7
+$MooseX::Runnable::VERSION = '0.08';
 # ABSTRACT: Tag a class as a runnable application
 
 use Moose::Role;
@@ -19,15 +19,13 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords Jonathan Rockway Doug Bell Duke Leto Karen Etheridge
-
 =head1 NAME
 
 MooseX::Runnable - Tag a class as a runnable application
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 

@@ -2,7 +2,7 @@ package MooseX::Runnable::Invocation::Plugin::Profile;
 BEGIN {
   $MooseX::Runnable::Invocation::Plugin::Profile::AUTHORITY = 'cpan:JROCKWAY';
 }
-$MooseX::Runnable::Invocation::Plugin::Profile::VERSION = '0.07';
+$MooseX::Runnable::Invocation::Plugin::Profile::VERSION = '0.08';
 use Moose::Role;
 use namespace::autoclean;
 

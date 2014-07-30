@@ -2,7 +2,7 @@ package MooseX::Runnable::Invocation::Scheme::MooseX::Getopt;
 BEGIN {
   $MooseX::Runnable::Invocation::Scheme::MooseX::Getopt::AUTHORITY = 'cpan:JROCKWAY';
 }
-$MooseX::Runnable::Invocation::Scheme::MooseX::Getopt::VERSION = '0.07';
+$MooseX::Runnable::Invocation::Scheme::MooseX::Getopt::VERSION = '0.08';
 use Moose::Role;
 use namespace::autoclean;
 
