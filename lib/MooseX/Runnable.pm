@@ -2,9 +2,10 @@ package MooseX::Runnable;
 BEGIN {
   $MooseX::Runnable::AUTHORITY = 'cpan:JROCKWAY';
 }
-# git description: v0.07-6-g1ab65a7
-$MooseX::Runnable::VERSION = '0.08';
+# git description: v0.08-3-ge30197d
+$MooseX::Runnable::VERSION = '0.09';
 # ABSTRACT: Tag a class as a runnable application
+# KEYWORDS: moose extension executable execute script binary run modulino
 
 use Moose::Role;
 use namespace::autoclean;
@@ -25,7 +26,7 @@ MooseX::Runnable - Tag a class as a runnable application
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 
@@ -130,6 +131,8 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =head1 CONTRIBUTORS
+
+=for stopwords Doug Bell Duke Leto Jonathan Rockway Karen Etheridge
 
 =over 4
 

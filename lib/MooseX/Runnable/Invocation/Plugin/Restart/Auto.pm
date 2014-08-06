@@ -2,7 +2,7 @@ package MooseX::Runnable::Invocation::Plugin::Restart::Auto;
 BEGIN {
   $MooseX::Runnable::Invocation::Plugin::Restart::Auto::AUTHORITY = 'cpan:JROCKWAY';
 }
-$MooseX::Runnable::Invocation::Plugin::Restart::Auto::VERSION = '0.08';
+$MooseX::Runnable::Invocation::Plugin::Restart::Auto::VERSION = '0.09';
 use Moose::Role;
 use MooseX::Types;
 use MooseX::Types::Moose qw(ArrayRef RegexpRef Any Str);

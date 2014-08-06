@@ -5,7 +5,7 @@ BEGIN {
   $MooseX::Runnable::Run::AUTHORITY = 'cpan:JROCKWAY';
 }
 # ABSTRACT: Run a MooseX::Runnable class as an application
-$MooseX::Runnable::Run::VERSION = '0.08';
+$MooseX::Runnable::Run::VERSION = '0.09';
 use MooseX::Runnable::Invocation;
 use namespace::autoclean;
 
@@ -53,7 +53,7 @@ MooseX::Runnable::Run - Run a MooseX::Runnable class as an application
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 

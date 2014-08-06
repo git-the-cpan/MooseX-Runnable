@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Runnable::Util::ArgParser::AUTHORITY = 'cpan:JROCKWAY';
 }
 # ABSTRACT: parse @ARGV for C<mx-run>
-$MooseX::Runnable::Util::ArgParser::VERSION = '0.08';
+$MooseX::Runnable::Util::ArgParser::VERSION = '0.09';
 use Moose;
 use MooseX::Types::Moose qw(HashRef ArrayRef Str Bool);
 use MooseX::Types::Path::Tiny qw(Path);
@@ -274,7 +274,7 @@ MooseX::Runnable::Util::ArgParser - parse @ARGV for C<mx-run>
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 

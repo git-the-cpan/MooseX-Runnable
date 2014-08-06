@@ -64,7 +64,7 @@ EOW
         "Jonathan Rockway <jrockway\@cpan.org>"
       ],
       "dist_name" => "MooseX-Runnable",
-      "dist_version" => "0.08",
+      "dist_version" => "0.09",
       "license" => "perl",
       "module_name" => "MooseX::Runnable",
       "recommends" => {
@@ -93,9 +93,7 @@ EOW
       "test_requires" => {
         "ExtUtils::MakeMaker" => 0,
         "File::Spec" => 0,
-        "List::Util" => 0,
         "MooseX::Getopt" => 0,
-        "Scalar::Util" => 0,
         "Test::Fatal" => 0,
         "Test::More" => 0,
         "Test::TableDriven" => 0,
@@ -107,9 +105,7 @@ EOW
     my %fallback_build_requires = (
       "ExtUtils::MakeMaker" => 0,
       "File::Spec" => 0,
-      "List::Util" => 0,
       "MooseX::Getopt" => 0,
-      "Scalar::Util" => 0,
       "Test::Fatal" => 0,
       "Test::More" => 0,
       "Test::TableDriven" => 0,

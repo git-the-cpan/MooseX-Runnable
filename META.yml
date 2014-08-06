@@ -5,9 +5,7 @@ author:
 build_requires:
   ExtUtils::MakeMaker: '0'
   File::Spec: '0'
-  List::Util: '0'
   MooseX::Getopt: '0'
-  Scalar::Util: '0'
   Test::Fatal: '0'
   Test::More: '0'
   Test::TableDriven: '0'
@@ -17,6 +15,15 @@ configure_requires:
   Module::Build::Tiny: '0.037'
 dynamic_config: 0
 generated_by: 'Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.142060'
+keywords:
+  - moose
+  - extension
+  - executable
+  - execute
+  - script
+  - binary
+  - run
+  - modulino
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -29,46 +36,46 @@ no_index:
 provides:
   MooseX::Runnable:
     file: lib/MooseX/Runnable.pm
-    version: '0.08'
+    version: '0.09'
   MooseX::Runnable::Invocation:
     file: lib/MooseX/Runnable/Invocation.pm
-    version: '0.08'
+    version: '0.09'
   MooseX::Runnable::Invocation::MxRun:
     file: lib/MooseX/Runnable/Invocation/MxRun.pm
-    version: '0.08'
+    version: '0.09'
   MooseX::Runnable::Invocation::Plugin::Debug:
     file: lib/MooseX/Runnable/Invocation/Plugin/Debug.pm
-    version: '0.08'
+    version: '0.09'
   MooseX::Runnable::Invocation::Plugin::PAR:
     file: lib/MooseX/Runnable/Invocation/Plugin/PAR.pm
-    version: '0.08'
+    version: '0.09'
   MooseX::Runnable::Invocation::Plugin::Profile:
     file: lib/MooseX/Runnable/Invocation/Plugin/Profile.pm
-    version: '0.08'
+    version: '0.09'
   MooseX::Runnable::Invocation::Plugin::Restart:
     file: lib/MooseX/Runnable/Invocation/Plugin/Restart.pm
-    version: '0.08'
+    version: '0.09'
   MooseX::Runnable::Invocation::Plugin::Restart::Auto:
     file: lib/MooseX/Runnable/Invocation/Plugin/Restart/Auto.pm
-    version: '0.08'
+    version: '0.09'
   MooseX::Runnable::Invocation::Plugin::Restart::Base:
     file: lib/MooseX/Runnable/Invocation/Plugin/Restart/Base.pm
-    version: '0.08'
+    version: '0.09'
   MooseX::Runnable::Invocation::Plugin::Role::CmdlineArgs:
     file: lib/MooseX/Runnable/Invocation/Plugin/Role/CmdlineArgs.pm
-    version: '0.08'
+    version: '0.09'
   MooseX::Runnable::Invocation::Role::WithParsedArgs:
     file: lib/MooseX/Runnable/Invocation/Role/WithParsedArgs.pm
-    version: '0.08'
+    version: '0.09'
   MooseX::Runnable::Invocation::Scheme::MooseX::Getopt:
     file: lib/MooseX/Runnable/Invocation/Scheme/MooseX/Getopt.pm
-    version: '0.08'
+    version: '0.09'
   MooseX::Runnable::Run:
     file: lib/MooseX/Runnable/Run.pm
-    version: '0.08'
+    version: '0.09'
   MooseX::Runnable::Util::ArgParser:
     file: lib/MooseX/Runnable/Util/ArgParser.pm
-    version: '0.08'
+    version: '0.09'
 recommends:
   MooseX::Getopt: '0'
 requires:
@@ -92,10 +99,10 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=MooseX-Runnable
   homepage: https://github.com/moose/MooseX-Runnable
   repository: https://github.com/moose/MooseX-Runnable.git
-version: '0.08'
+version: '0.09'
 x_Dist_Zilla:
   perl:
-    version: '5.019008'
+    version: '5.021001'
   plugins:
     -
       class: Dist::Zilla::Plugin::FileFinder::Filter
@@ -202,7 +209,7 @@ x_Dist_Zilla:
             - ':ExecFiles'
             - '@Author::ETHER/Examples'
       name: '@Author::ETHER/Test::Compile'
-      version: '2.043'
+      version: '2.044'
     -
       class: Dist::Zilla::Plugin::Test::NoTabs
       config:
@@ -258,7 +265,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Test::ReportPrereqs
       name: '@Author::ETHER/Test::ReportPrereqs'
-      version: '0.017'
+      version: '0.018'
     -
       class: Dist::Zilla::Plugin::Test::Portability
       name: '@Author::ETHER/Test::Portability'
@@ -354,7 +361,7 @@ x_Dist_Zilla:
             -
               class: Pod::Weaver::Section::Contributors
               name: Contributors
-              version: '0.007'
+              version: 0.007_001
       name: '@Author::ETHER/SurgicalPodWeaver'
       version: '0.0021'
     -
@@ -364,7 +371,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::ReadmeAnyFromPod
       name: '@Author::ETHER/ReadmeAnyFromPod'
-      version: '0.141760'
+      version: '0.142180'
     -
       class: Dist::Zilla::Plugin::GithubMeta
       name: '@Author::ETHER/GithubMeta'
@@ -402,6 +409,13 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::Keywords
       name: '@Author::ETHER/Keywords'
       version: '0.005'
+    -
+      class: Dist::Zilla::Plugin::Git::Contributors
+      config:
+        Dist::Zilla::Plugin::Git::Contributors:
+          include_authors: '0'
+      name: '@Author::ETHER/Git::Contributors'
+      version: '0.002'
     -
       class: Dist::Zilla::Plugin::AutoPrereqs
       name: '@Author::ETHER/AutoPrereqs'
@@ -465,8 +479,12 @@ x_Dist_Zilla:
       version: '0.007'
     -
       class: Dist::Zilla::Plugin::Run::AfterBuild
+      config:
+        Dist::Zilla::Plugin::Run::Role::Runner:
+          run:
+            - "bash -c \"if [[ `dirname %d` != .build ]]; then test -e .ackrc && grep -q -- '--ignore-dir=%d' .ackrc || echo '--ignore-dir=%d' >> .ackrc; fi; if [[ %d =~ ^%n-[.[:xdigit:]]+$ ]]; then rm -f .latest; ln -s %d .latest; fi\""
       name: '@Author::ETHER/Run::AfterBuild'
-      version: '0.022'
+      version: '0.023'
     -
       class: Dist::Zilla::Plugin::CheckStrictVersion
       name: '@Author::ETHER/CheckStrictVersion'
@@ -501,15 +519,11 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Git::Remote::Check
       name: '@Author::ETHER/Git::Remote::Check'
-      version: 0.1.2
+      version: 0.2.0
     -
       class: Dist::Zilla::Plugin::CheckPrereqsIndexed
       name: '@Author::ETHER/CheckPrereqsIndexed'
       version: '0.012'
-    -
-      class: Dist::Zilla::Plugin::TestRelease
-      name: '@Author::ETHER/TestRelease'
-      version: '5.020'
     -
       class: Dist::Zilla::Plugin::Git::Check
       config:
@@ -537,8 +551,12 @@ x_Dist_Zilla:
       version: '0.001'
     -
       class: Dist::Zilla::Plugin::Run::AfterRelease
-      name: '@Author::ETHER/Run::AfterRelease'
-      version: '0.022'
+      config:
+        Dist::Zilla::Plugin::Run::Role::Runner:
+          run:
+            - 'rm -f README.md'
+      name: '@Author::ETHER/remove old READMEs'
+      version: '0.023'
     -
       class: Dist::Zilla::Plugin::Git::Commit
       config:
@@ -566,7 +584,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: 0
-          tag: v0.08
+          tag: v0.09
           tag_format: v%v%t
           tag_message: v%v%t
           time_zone: local
@@ -590,9 +608,12 @@ x_Dist_Zilla:
       name: '@Author::ETHER/Git::Push'
       version: '2.023'
     -
-      class: Dist::Zilla::Plugin::InstallRelease
-      name: '@Author::ETHER/InstallRelease'
-      version: '0.008'
+      class: Dist::Zilla::Plugin::Run::AfterRelease
+      config:
+        Dist::Zilla::Plugin::Run::Role::Runner:
+          run: REDACTED
+      name: '@Author::ETHER/install release'
+      version: '0.023'
     -
       class: Dist::Zilla::Plugin::ConfirmRelease
       name: '@Author::ETHER/ConfirmRelease'
@@ -633,10 +654,6 @@ x_Dist_Zilla:
           type: requires
       name: DevelopRequires
       version: '5.020'
-    -
-      class: Dist::Zilla::Plugin::ContributorsFromGit
-      name: ContributorsFromGit
-      version: '0.006'
     -
       class: Dist::Zilla::Plugin::Test::CheckBreaks
       name: Test::CheckBreaks

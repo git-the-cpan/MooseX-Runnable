@@ -9,7 +9,6 @@ META.json
 META.yml
 Makefile.PL
 README
-README.pod
 dist.ini
 example/LongRunning.pm
 example/MyApp.pm

@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Runnable::Invocation::Plugin::Debug::AUTHORITY = 'cpan:JROCKWAY';
 }
 # ABSTRACT: print debugging information
-$MooseX::Runnable::Invocation::Plugin::Debug::VERSION = '0.08';
+$MooseX::Runnable::Invocation::Plugin::Debug::VERSION = '0.09';
 use Moose::Role;
 use namespace::autoclean;
 
@@ -67,7 +67,7 @@ MooseX::Runnable::Invocation::Plugin::Debug - print debugging information
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 DESCRIPTION
 

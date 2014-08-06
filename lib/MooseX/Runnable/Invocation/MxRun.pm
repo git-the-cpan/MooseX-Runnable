@@ -2,7 +2,7 @@ package MooseX::Runnable::Invocation::MxRun;
 BEGIN {
   $MooseX::Runnable::Invocation::MxRun::AUTHORITY = 'cpan:JROCKWAY';
 }
-$MooseX::Runnable::Invocation::MxRun::VERSION = '0.08';
+$MooseX::Runnable::Invocation::MxRun::VERSION = '0.09';
 use Moose;
 use namespace::autoclean;
 
